@@ -1,0 +1,9 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: hello
+spec:
+  virtualhost:
+    fqdn: hello-staging.contour.sof-pilot.net
+
+

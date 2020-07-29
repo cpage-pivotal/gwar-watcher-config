@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  labels:
+    app: hello
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  template:
+    metadata:
+      name: hello
+      labels:
+        app: hello
+    spec:
+      containers:
+        - name: hello
+          image: harbor.sof-pilot.net/development/hello:latest
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: hello
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: hello

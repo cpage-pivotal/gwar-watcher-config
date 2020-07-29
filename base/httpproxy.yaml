@@ -1,0 +1,15 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: hello
+spec:
+  virtualhost:
+    fqdn: default.example.com
+    tls:
+      secretName: projectcontour/contour-tls
+  routes:
+    - services:
+        - name: hello
+          port: 80
+
+

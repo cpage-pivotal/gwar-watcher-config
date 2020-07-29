@@ -1,9 +1,9 @@
 apiVersion: projectcontour.io/v1
 kind: HTTPProxy
 metadata:
-  name: hello
+  name: gwar-watcher
 spec:
   virtualhost:
-    fqdn: hello-dev.contour.sof-pilot.net
+    fqdn: gwar-watcher-dev.contour.sof-pilot.net
 
 

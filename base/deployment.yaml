@@ -1,26 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
+  name: gwar-watcher
   labels:
-    app: hello
+    app: gwar-watcher
 spec:
   replicas: 1
   revisionHistoryLimit: 1
   template:
     metadata:
-      name: hello
+      name: gwar-watcher
       labels:
-        app: hello
+        app: gwar-watcher
     spec:
       containers:
-        - name: hello
-          image: harbor.sof-pilot.net/development/hello:latest
+        - name: gwar-watcher
+          image: harbor.sof-pilot.net/development/gwar-watcher:latest
           imagePullPolicy: Always
-          envFrom:
-            - configMapRef:
-                name: hello
       restartPolicy: Always
   selector:
     matchLabels:
-      app: hello
+      app: gwar-watcher

@@ -1,7 +1,7 @@
 apiVersion: projectcontour.io/v1
 kind: HTTPProxy
 metadata:
-  name: hello
+  name: gwar-watcher
 spec:
   virtualhost:
     fqdn: default.example.com
@@ -9,7 +9,7 @@ spec:
       secretName: projectcontour/contour-tls
   routes:
     - services:
-        - name: hello
+        - name: gwar-watcher
           port: 80
 
 

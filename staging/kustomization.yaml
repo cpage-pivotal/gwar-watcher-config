@@ -1,9 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: sof-staging
+namespace: gwar-watcher-staging
 resources:
   - ../base
 patchesStrategicMerge:
   - deployment.yaml
-  - configmap.yaml
   - httpproxy.yaml

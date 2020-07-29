@@ -4,7 +4,3 @@ resources:
   - deployment.yaml
   - service.yaml
   - httpproxy.yaml
-configMapGenerator:
-  - name: hello
-    literals:
-      - web.color=DarkSlateGray

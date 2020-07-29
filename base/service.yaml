@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello
+  name: gwar-watcher
 spec:
   selector:
-    app: hello
+    app: gwar-watcher
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 80
   type: ClusterIP

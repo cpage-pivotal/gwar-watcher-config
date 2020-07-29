@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
+  name: gwar-watcher
   labels:
-    app: hello
+    app: gwar-watcher
 spec:
   replicas: 2
   template:
     spec:
       containers:
-        - name: hello
-          image: harbor.sof-pilot.net/development/hello:latest
+        - name: gwar-watcher
+          image: harbor.sof-pilot.net/development/gwar-watcher:latest
 

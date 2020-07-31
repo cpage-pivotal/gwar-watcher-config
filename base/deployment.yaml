@@ -17,6 +17,9 @@ spec:
         - name: gwar-watcher
           image: harbor.sof-pilot.net/development/gwar-watcher:latest
           imagePullPolicy: Always
+          env:
+            - name: PORT
+              value: "8080"
       restartPolicy: Always
   selector:
     matchLabels:

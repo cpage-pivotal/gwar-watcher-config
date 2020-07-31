@@ -12,3 +12,4 @@ spec:
         - name: gwar-watcher
           image: harbor.sof-pilot.net/development/gwar-watcher:latest
 
+
